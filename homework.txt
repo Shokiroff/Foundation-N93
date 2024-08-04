@@ -1,0 +1,65 @@
+1-masala:
+def qwerty(lst, n):
+	result = []
+	for i in range(0, len(lst), n):
+		result.append(lst[i:i + n])
+	return result
+if __name__ == "__main__":
+	n = int(input("Sonni kiriting: "))
+	lst = ["A", "B", "C", "D", "E","F", "I", "J", "Q", "M"]
+	result = list(qwerty(lst, n))
+	print(result)
+
+2-masala:
+
+
+3-masala:
+
+from random import *
+def funksiya(x):
+    dic = {}
+    for i in x:
+        if i in dic:
+            dic[i] += 1
+        else:
+            dic[i] = 1
+    return dic
+if __name__=="__main__":
+    a = [randint(10,20) for i in range (20)]
+    print(f"dastlabki holat {a}\n\nSaralangabdan keyin")
+    print(funksiya(a))
+
+4-masala:model = [{
+"model": "RDX",
+"year": 2009
+}, {
+"model": "LS",
+"year": 2000
+}, {
+"model": "GLK-Class",
+"year": 2010
+}, {
+"model": "Express 1500",
+"year": 2005
+}, {
+"model": "LR2",
+"year": 2008
+}, {
+"model": "XF",
+"year": 2012
+}, {
+"model": "MR2",
+"year": 2005
+},{
+"model": "Malibu",
+"year": 2007
+}, {
+"model": "M-Class",
+"year": 2010
+}, {
+"model": "Routan",
+"year": 2011
+}]
+years = sorted(model,key=lambda x :x['year'])
+print(years)
+
