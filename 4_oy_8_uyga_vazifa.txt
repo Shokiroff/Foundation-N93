@@ -1,0 +1,58 @@
+1-masala
+import os
+os.system("clear")
+print("\t\tDastlabki ro'yxat")
+lst = ["A", "B", "C", "D", "E", "F", "G", "L", "Q", "U"]
+print(lst)
+n = int(input("Ro'yxatni bo'lish uchun sonni kiriting >>> "))
+
+result = []
+print("\t\tBo'lingandan so'ng")
+for x in range(0, len(lst), n):
+	result.append(lst[x:x + n])
+print(result)
+
+3-masala
+import os
+os.system("clear")
+
+def elements(ls):
+	dic = {}
+	for x in ls:
+		if x in dic:
+			dic[x] += 1
+		else:
+			dic[x] = 1
+	return dic
+
+if __name__ == "__main__":
+
+	myList = list(map(int,input("List elementlarini kiriting >>> ").split()))
+	print("\nmyList =",myList,"\n")
+	result = elements(myList)
+	print("myDct =",result)
+
+4-masala
+import os
+os.system("clear")
+
+mashinalar = [
+    {"model": "RDX", "year": 2009},
+    {"model": "GLK-Class", "year": 2010},
+    {"model": "Express 1500", "year": 2005},
+    {"model": "LR2", "year": 2008},
+    {"model": "XF", "year": 2005},
+    {"model": "Malibu", "year": 2007},
+    {"model": "M-Class", "year": 2010},
+    {"model": "Routan", "year": 2011}
+]
+print("\t\tDastlabki ro'yxat:\n")
+print(mashinalar,"\n")
+
+tartibla = sorted(mashinalar, key = lambda mashina: mashina["year"])
+
+ls = []
+for mashina in tartibla:
+	ls.append(mashina)
+print("\t\tSaralangandan so'ng (yili bo'yicha)\n")
+print(ls)
